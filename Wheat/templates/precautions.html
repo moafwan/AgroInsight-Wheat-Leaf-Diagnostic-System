@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <title>Wheat Leaf Disease Detection</title>
+    <style>
+        body {
+            background-image: url("static/bg.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .home-btn {
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 50px;
+            font-size: 25px;
+            color: white;
+            margin-top: 20px;
+            background-color: rgba(255, 255, 255, 0.5);
+            color: black;
+            border-radius: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s ease;
+        }
+
+        /* Portfolio cards */
+        .card {
+            margin: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: rgb(255, 255, 255);
+            overflow: hidden; /* Hide overflow content */
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            z-index: 100;
+        }
+
+        .card-title {
+            position: absolute;
+            top: 25px;
+            bottom: auto;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgb(1, 1, 1);
+        }
+
+        .card-text-text {
+            visibility: hidden;
+        }
+
+        .card-text {
+            color: #000;
+            overflow: visible;
+            height: 105px;
+        }
+
+        .card-text:hover {
+            visibility: visible;
+            overflow: visible;
+            height: fit-content;
+        }
+
+        .popover-content {
+            max-width: 300px; /* Set max width for popover */
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Wheat Leaf Disease Detection</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/detect">Real Time</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/upload">Upload</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/precautions">Precautions</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <div class="container text-center" class="container text-center" style="
+          color: white;
+          margin-top: 20px;
+          background-color: rgba(255, 255, 255, 0.3);
+          border-radius: 15px;
+          padding: 30px;
+        ">
+        <h1 class="text-center mb-4">Wheat Plant Disease Precautions</h1>
+        <div class="row">
+            <!-- Brown Rust -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body" data-toggle="popover">
+                        <h3 class="card-title">Brown Rust</h3>
+                        <p class="card-text-text">Precautions for Brown Rust:</p>
+                        <p class="card-text">Brown rust, caused by the fungal pathogen Puccinia triticina, is a common wheat disease that can lead to significant yield losses if not managed effectively. The disease typically appears as small reddish-brown pustules on the leaves, stems, and spikes of wheat plants. These pustules contain masses of spores, which can spread rapidly under favorable environmental conditions such as high humidity and moderate temperatures. To prevent the spread of brown rust, farmers can opt for resistant wheat varieties, practice crop rotation with non-host plants, and apply fungicides preventively. Regular monitoring of crops for early signs of infection, coupled with the prompt removal and destruction of infected plant debris, are crucial precautions to mitigate the impact of brown rust on wheat yields.
+                    </div>
+                </div>
+            </div>
+            <!-- Loose Smut -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body" data-toggle="popover">
+                        <h3 class="card-title">Loose Smut</h3>
+                        <p class="card-text-text">Precautions for Loose Smut:</p>
+                        <p class="card-text">Loose smut, caused by the fungus Ustilago tritici, is a seed-borne disease that primarily affects the heads of wheat plants. Infected plants exhibit heads filled with dark masses of spores instead of grains, resulting in significant yield losses if left unmanaged. To prevent the spread of loose smut, farmers should use certified disease-free seeds and treat seeds with fungicides or hot water to kill the pathogen. Implementing crop rotation with non-host crops can help reduce inoculum levels in the soil. Additionally, vigilant inspection of seedlings for signs of infection, avoiding seed saving from infected plants, and promptly removing and destroying infected plants are essential precautions to minimize the impact of loose smut on wheat production.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Septoria -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body" data-toggle="popover">
+                        <h3 class="card-title">Septoria</h3>
+                        <p class="card-text-text">Precautions for Septoria:</p>
+                        <p class="card-text">Septoria leaf blotch, caused by the fungus Septoria tritici, is a common fungal disease that affects wheat plants, particularly during periods of high humidity and rainfall. The disease appears as small dark spots with yellow halos on wheat leaves, which can coalesce to form larger lesions under favorable conditions. To prevent the spread of Septoria, farmers can opt for resistant wheat varieties and practice crop rotation to reduce inoculum levels in the soil. Applying fungicides preventively can also help manage the disease. Maintaining good airflow within the crop canopy, avoiding overhead irrigation to minimize moisture on leaves, and regular monitoring of crops for signs of infection are important precautions to mitigate the impact of Septoria leaf blotch on wheat yields.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Yellow Rust -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body" data-toggle="popover">
+                        <h3 class="card-title">Yellow Rust</h3>
+                        <p class="card-text-text">Precautions for Yellow Rust:</p>
+                        <p class="card-text">Yellow rust, caused by the fungus Puccinia striiformis, is a serious wheat disease that can cause significant yield losses if not managed effectively. The disease manifests as yellow-orange pustules arranged in stripes on the leaves of wheat plants, which can spread rapidly under favorable environmental conditions. To prevent the spread of yellow rust, farmers should opt for resistant wheat varieties and apply fungicides preventively, especially during periods of high disease pressure. Maintaining optimal plant nutrition to enhance plant resistance is also important. Regular monitoring of crops for signs of infection, early planting to avoid peak disease pressure periods, and the prompt removal and destruction of infected plant debris are crucial precautions to mitigate the impact of yellow rust on wheat production.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Stripe Rust -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body" data-toggle="popover">
+                        <h3 class="card-title">Stripe Rust</h3>
+                        <p class="card-text-text">Precautions for Stripe Rust:</p>
+                        <p class="card-text">Stripe rust, caused by the fungus Puccinia striiformis f.sp. tritici, is a significant wheat disease that can cause considerable yield losses under favorable environmental conditions. The disease appears as yellow to orange pustules arranged in elongated stripes on the leaves of wheat plants. To prevent the spread of stripe rust, farmers should opt for resistant wheat varieties and apply fungicides preventively, particularly during periods of high disease pressure. Implementing crop rotation with non-host crops can also help reduce inoculum levels in the soil. Regular monitoring of crops for signs of infection, avoiding excessive nitrogen fertilization, and practicing timely planting to reduce disease pressure are important precautions to mitigate the impact of stripe rust on wheat yields
+                            .</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Crown Root Rot -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body" data-toggle="popover">
+                        <h3 class="card-title">Crown Root </h3>
+                        <p class="card-text-text">Precautions for Crown Root Rot:</p>
+                        <p class="card-text">Crown root rot is a soilborne disease caused by various fungi, including Fusarium spp. and Rhizoctonia spp., that affects the roots and crown of wheat plants. The disease can lead to wilting, yellowing, and stunting of plants, ultimately resulting in reduced yields. To prevent the spread of crown root rot, farmers should focus on improving soil drainage to reduce waterlogging, as the disease thrives in wet conditions. Implementing crop rotation with non-host crops and using disease-free seeds and planting materials can also help manage the disease. Additionally, avoiding over-irrigation, planting in well-drained soils, and monitoring soil health to maintain optimal soil structure and fertility are important precautions against crown root rot in wheat production.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
